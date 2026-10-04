@@ -1,0 +1,285 @@
+css * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f4f6;
+    color: #222;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* HEADER */
+
+.header {
+    background: #222;
+    color: white;
+    padding: 30px 0;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.header p {
+    color: #ccc;
+}
+
+
+/* FORM */
+
+.form-section {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.form-section h2 {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 16px;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #333;
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+button {
+    border: none;
+    border-radius: 7px;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#submitButton {
+    background: #222;
+    color: white;
+}
+
+#submitButton:hover {
+    background: #444;
+}
+
+#submitButton:disabled {
+    background: #999;
+    cursor: not-allowed;
+}
+
+
+/* MESSAGE */
+
+#formMessage {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.success {
+    color: green;
+}
+
+.error {
+    color: red;
+}
+
+
+/* ADS */
+
+.ads-section {
+    margin-bottom: 40px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.section-header h2 {
+    font-size: 28px;
+}
+
+.refresh-button {
+    background: white;
+    border: 1px solid #ccc;
+}
+
+.refresh-button:hover {
+    background: #eee;
+}
+
+.ads-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+
+/* AD CARD */
+
+.ad-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.ad-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+.ad-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background: #ddd;
+}
+
+.no-image {
+    width: 100%;
+    height: 200px;
+    background: #e5e7eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #777;
+    font-size: 16px;
+}
+
+.ad-content {
+    padding: 18px;
+}
+
+.ad-title {
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.ad-description {
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    min-height: 45px;
+}
+
+.ad-price {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.ad-actions {
+    margin-top: 8px;
+}
+
+.delete-button {
+    width: 100%;
+    background: #dc2626;
+    color: white;
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.delete-button:hover {
+    background: #b91c1c;
+}
+
+
+/* LOADING */
+
+.loading {
+    text-align: center;
+    padding: 30px;
+    color: #666;
+}
+
+.empty-message {
+    display: none;
+    text-align: center;
+    padding: 40px;
+    background: white;
+    border-radius: 10px;
+    color: #777;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #222;
+    color: #aaa;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+
+/* ADAPTIVE */
+
+@media (max-width: 900px) {
+    .ads-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 94%;
+    }
+
+    .header h1 {
+        font-size: 26px;
+    }
+
+    .ads-list {
+        grid-template-columns: 1fr;
+    }
+
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}

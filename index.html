@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Доска объявлений</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <h1>Доска объявлений</h1>
+            <p>Покупай и продавай легко</p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="form-section">
+            <h2>Добавить объявление</h2>
+
+            <form id="adForm">
+
+                <div class="form-group">
+                    <label for="title">Название</label>
+                    <input type="text" id="title" name="title" placeholder="Например: iPhone 15" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Описание</label>
+                    <textarea id="description" name="description" placeholder="Опишите товар" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="price">Цена</label>
+                    <input type="number" id="price" name="price" placeholder="Например: 45000" min="0" step="0.01"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="image">Изображение</label>
+                    <input type="file" id="image" name="image" accept="image/*" required>
+                </div>
+
+                <button type="submit" id="submitButton">
+                    Добавить объявление
+                </button>
+
+            </form>
+
+            <div id="formMessage"></div>
+        </section>
+
+
+        <!-- Список объявлений -->
+        <section class="ads-section">
+            <div class="section-header">
+                <h2>Объявления</h2>
+                <button id="refreshButton" class="refresh-button">
+                    Обновить
+                </button>
+            </div>
+
+            <div id="loading" class="loading">
+                Загрузка объявлений...
+            </div>
+
+            <div id="adsList" class="ads-list"></div>
+
+            <div id="emptyMessage" class="empty-message">
+                Объявлений пока нет.
+            </div>
+        </section>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
